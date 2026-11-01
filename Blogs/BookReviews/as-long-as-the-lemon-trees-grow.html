@@ -177,7 +177,7 @@ if(k)show('https://covers.openlibrary.org/b/isbn/'+k+'-L.jpg?default=false',ol);
 var q=location.search,ctx='reviews';
 try{if(/[?&]from=reviews\b/.test(q))ctx='reviews';else if(/[?&]from=club\b/.test(q)||/bookclub/i.test(document.referrer))ctx='club'}catch(e){}
 if(ctx==='club'){
- var bk=document.getElementById('bkBack');if(bk){bk.href='../BookClub';bk.textContent='\u2190 The Book Club'}
+ var bk=document.getElementById('bkBack');if(bk){bk.href='/BookClub';bk.textContent='\u2190 The Book Club'}
  [].forEach.call(document.querySelectorAll('.nav nav a'),function(a){var h=a.getAttribute('href')||'';a.className=/bookclub\.html$/.test(h)?'on':''});
  var ib=document.getElementById('igBox'),ca=ib&&ib.querySelector('.ig-card');
  if(ca&&!ib.getAttribute('data-ig')){ca.href='https://www.instagram.com/thebookbuffssociety/';ca.querySelector('.ig-tx b').textContent='Follow the book club on Instagram';ca.querySelector('.ig-tx small').innerHTML='@TheBookBuffsSociety &middot; opens in a new tab';var ig=document.getElementById('igTitle');if(ig)ig.textContent='Join the conversation'}
